@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adina - Digital Services</title>
+    <script>
+(() => {
+  const TEXT = "• Adina • Digital Services • Assistance • Design";
+  const SEP = "   ";          // spazi tra le ripetizioni
+  const SPEED = 180-220;      // ms per step (aumenta per rallentare)
+  const PAUSE = 900;          // pausa a ogni giro
+  if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+
+  const original = document.title;
+  const phrase = (SEP + TEXT + SEP).repeat(2);
+  let i = 0, id = null;
+
+  function tick() {
+    document.title = phrase.slice(i) + phrase.slice(0, i);
+    i = (i + 1) % phrase.length;
+    id = setTimeout(tick, i === 0 ? PAUSE : SPEED);
+  }
+  function start(){ if (!id) id = setTimeout(tick, 0); }
+  function stop(){ if (id) { clearTimeout(id); id = null; document.title = original; } }
+
+  // avvia
+  start();
+
+  // per risparmiare batteria/CPU quando la tab è nascosta
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) { clearTimeout(id); id = null; }
+    else { start(); }
+  });
+
+  // ripristina il titolo quando chiudi/navigi via
+  window.addEventListener("beforeunload", stop, { once: true });
+
+  // opzionale: solo desktop
+  if (window.matchMedia("(pointer: coarse)").matches) stop();
+})();
+</script>
+
+
+  </head>
+
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+
+
+</html>
