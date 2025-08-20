@@ -2,12 +2,12 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]        # oppure "master" se usi master
-  workflow_dispatch:          # avvio manuale
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write                # necessario per deploy-pages
+  pages: write
   id-token: write
 
 concurrency:
@@ -27,19 +27,22 @@ jobs:
           node-version: 20
           cache: npm
 
+      # Se non committi package-lock.json, usa npm install
       - name: Install deps
         run: npm ci
 
       - name: Build
         run: npm run build
 
-      # SPA fallback: copia index -> 404 per BrowserRouter
       - name: Add SPA 404 fallback
         run: cp dist/index.html dist/404.html
 
-      # opzionale: evita trattamenti Jekyll
       - name: Add .nojekyll
         run: touch dist/.nojekyll
+
+      # Se hai un dominio personalizzato, copia CNAME (metti CNAME in public/)
+      # - name: Add CNAME
+      #   run: cp public/CNAME dist/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -47,12 +50,17 @@ jobs:
           path: ./dist
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
     steps:
+      # (Opzionale) configura Pages — utile se in futuro servirà
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v5
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
