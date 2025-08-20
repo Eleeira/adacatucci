@@ -129,14 +129,15 @@ export default function RadialMenu({
           >
             {/* cerchio base (wireframe) */}
             <circle
-              cx={cx}
-              cy={cy}
-              r={(inner + outer) / 2}
-              fill="none"
-              stroke="rgba(84,193,230,.25)"
-              strokeDasharray="6 8"
-              vectorEffect="non-scaling-stroke"
-              aria-hidden="true"
+                cx={cx}
+                cy={cy}
+                r={(inner + outer) / 2}
+                fill="none"
+                stroke="rgba(84,193,230,.35)"
+                strokeDasharray="6 8"
+                vectorEffect="non-scaling-stroke"
+                className="radial-rotor spin-cw"
+                aria-hidden="true"
             />
 
             {segs.map((s) => {
@@ -211,22 +212,16 @@ export default function RadialMenu({
             <circle
               cx={cx}
               cy={cy}
-              r={inner - 16}
-              fill="rgba(0,0,0,.35)"
-              className="glass"
-              aria-hidden="true"
-            />
-            <circle
-              cx={cx}
-              cy={cy}
               r={inner - 26}
               fill="none"
               stroke="rgba(254,232,1,.85)"
               strokeWidth="1.5"
               strokeDasharray="2 6"
               vectorEffect="non-scaling-stroke"
+              className="radial-rotor spin-ccw"
               aria-hidden="true"
             />
+          
             <text
               x={cx}
               y={cy}

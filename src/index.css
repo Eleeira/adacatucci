@@ -383,3 +383,29 @@ svg *:focus { outline: none; }
     cursor: auto;
   }
 }
+
+
+
+
+
+
+
+
+/* Rotazioni per i cerchi tratteggiati del RadialMenu */
+@keyframes spin-cw   { to { transform: rotate(360deg); } }
+@keyframes spin-ccw  { to { transform: rotate(-360deg); } }
+
+.radial-rotor {
+  transform-box: fill-box;      /* fa sì che l'origine sia il riquadro dell'elemento SVG */
+  transform-origin: 50% 50%;    /* centro del cerchio */
+  will-change: transform;
+  pointer-events: none;          /* i cerchi decorativi non devono prendere click */
+}
+
+.spin-cw  { animation: spin-cw  24s linear infinite; }  /* blu: un po' più veloce */
+.spin-ccw { animation: spin-ccw 36s linear infinite; }  /* giallo: più lento, in senso opposto */
+
+/* Rispetta riduzione movimento */
+@media (prefers-reduced-motion: reduce) {
+  .spin-cw, .spin-ccw { animation: none; }
+}
