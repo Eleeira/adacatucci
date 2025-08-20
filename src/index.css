@@ -353,3 +353,33 @@ svg *:focus { outline: none; }
 .footer-bottom{
   background: rgba(0,0,0,.30); /* eredita il blur dal contenitore */
 }
+
+
+
+
+
+/* Cursor minimal neon — attiva se c'è QUALSIASI puntatore fine (mouse, penna, ecc.) */
+@media (any-pointer: fine) {
+  /* cursore di default: pallino */
+  html, body {
+    /* hotspot al centro 16 16 (per PNG 32x32) */
+    cursor: url("./assets/cursors/neon-dot.png") 16 16, auto;
+  }
+
+  /* elementi cliccabili: versione "pointer" + fallback pointer */
+  a, button, [role="button"], .btn, .radial-wedge {
+    cursor: url("./assets/cursors/neon-pointer.png") 16 16, pointer;
+  }
+
+  /* campi testuali: mantieni l'I-beam */
+  input, textarea {
+    cursor: text;
+  }
+}
+
+/* Su touch evita i cursori custom */
+@media (any-pointer: coarse) {
+  html, body, a, button, [role="button"], .btn, .radial-wedge {
+    cursor: auto;
+  }
+}
