@@ -1,4 +1,4 @@
-# Cyber Portfolio — React + Vite + Tailwind v4
+# Adina - Digital Services  —  React + Vite + Tailwind v4
 
 <p align="center">
   <a href="https://nodejs.org/">
