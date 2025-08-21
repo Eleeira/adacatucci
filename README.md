@@ -231,7 +231,18 @@ RadialMenu becomes a simple list on small screens
   }
 }
 ```
+---
 
+## Screenshots & Highlights
+
+- Key views of the application showcasing design and functionality.
+
+<p align="center">
+  <img src="./src/screenshot/screenshot1.png" alt="lighthousedesktop" width="400"/>
+  <img src="./src/screenshot/screenshot2.png" alt="lighthousemobile" width="400"/>
+</p>
+
+---
 
 ## Troubleshooting
 
