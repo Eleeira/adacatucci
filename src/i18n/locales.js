@@ -39,7 +39,7 @@ export const locales = {
       title: "Servizi",
       desc: "Pacchetti flessibili di assistenza digitale.",
       panel: {
-        heroTitle: "🚀 Servizi di Assistenza Digitale",
+        heroTitle: "🚀 Servizi di Assistenza Digitale e Web Design",
         heroSubtitle:
           "Scegli il pacchetto perfetto per le tue esigenze. Supporto flessibile ed efficiente, occasionale o continuativo.",
         vatNote: "Prezzi IVA esclusa (se applicabile)",
@@ -55,13 +55,13 @@ export const locales = {
         },
 
         standard: {
-          title: "SUPPORTO STANDARD — Assistenza efficiente e strutturata",
-          subtitle:
-            "Ideale per piccole aziende e professionisti che necessitano di supporto regolare. Include tutto il BASIC, più:",
-          includes:
-            "Troubleshooting più approfondito (hardware e software) | Ottimizzazione del flusso di lavoro e automazioni (macro, formule, template) | Formattazione avanzata di documenti (Word, presentazioni PowerPoint) | Tempo di risposta prioritario | Supporto multilingue: Italiano e Inglese (completo), Francese, Spagnolo e Svedese (per piccole attività) | Efficienza potenziata dall'AI",
-          price: "500 SEK / ora — 10 000 SEK / mese",
-        },
+        title: "WEB DESIGN (front-end)",
+        subtitle: "Responsive · Modern · Minimal",
+        includes:
+        "Sito web semplice (1–6 pagine): 10 000 SEK | Sito web con API: 20 000 SEK | Hosting: a scelta del cliente (gestito da me o in autonomia) | Manutenzione - Pacchetto Base (1 000–1 500 SEK/mese): aggiornamenti di sicurezza mensili, monitoraggio uptime e performance, backup mensile, supporto via email (24–48h), modifiche extra a 600–900 SEK/ora | Manutenzione - Pacchetto Avanzato (2 500–4 000 SEK/mese): tutti i servizi del Base, aggiornamenti settimanali o quindicinali, 1–2 ore di modifiche incluse, supporto prioritario, monitoraggio avanzato delle performance/API",
+        price: "10 000 - 25 000 SEK",
+            },
+
 
         night: {
           title: "SUPPORTO NOTTURNO & PROGETTI SU MISURA",
@@ -138,7 +138,7 @@ export const locales = {
       title: "Tjänster",
       desc: "Flexibla paket för digital assistans.",
       panel: {
-        heroTitle: "🚀 Digital assistans-tjänster",
+        heroTitle: "🚀 Digital assistans-tjänster & Web Design",
         heroSubtitle:
           "Välj det perfekta paketet för dina behov. Flexibelt och effektivt stöd – vid behov eller löpande.",
         vatNote: "Priser exkl. moms (om tillämpligt)",
@@ -154,13 +154,13 @@ export const locales = {
         },
 
         standard: {
-          title: "STANDARDSTÖD — Effektivt & strukturerat",
-          subtitle:
-            "Idealiskt för småföretag och proffs som behöver regelbundet stöd. Inkluderar allt i BAS, plus:",
-          includes:
-            "Djupare felsökning (hårdvara & mjukvara) | Arbetsflödesoptimering & automatisering (makron, formler, mallar) | Avancerad dokumentformatering (Word, PowerPoint-presentationer) | Prioriterad svarstid | Flerspråkigt stöd: italienska & engelska (fullt), franska, spanska & svenska (mindre uppgifter) | AI-driven effektivitet",
-          price: "500 SEK/timme — 10 000 SEK/månad",
-        },
+  title: "WEBBDESIGN (front-end)",
+  subtitle: "Responsiv · Modern · Minimal",
+  includes:
+    "Enkel webbplats (1–6 sidor): 10 000 SEK | Webbplats med API-integration: 20 000 SEK | Hosting: väljs av kunden (hanteras av mig eller självständigt) | Underhåll - Bas-paket (1 000–1 500 SEK/månad): månatliga säkerhetsuppdateringar (t.ex. React-beroenden), övervakning av drifttid och prestanda, månatlig backup, e-postsupport (svarstid 24–48h), extra ändringar debiteras separat 600–900 SEK/timme | Underhåll - Avancerat paket (2 500–4 000 SEK/månad): alla tjänster från Bas-paketet, uppdateringar varje vecka eller varannan vecka, 1–2 timmars ändringar ingår, prioriterad support, avancerad övervakning av prestanda/API-användning",
+  price: "10 000 – 25 000 SEK",
+},
+
 
         night: {
           title: "KVÄLLSSTÖD & SKRÄDDARSYDDA PROJEKT",
@@ -237,7 +237,7 @@ export const locales = {
       title: "Services",
       desc: "Flexible digital assistance packages.",
       panel: {
-        heroTitle: "🚀 Digital Assistance Services",
+        heroTitle: "🚀 Digital Assistance Services & Web Design",
         heroSubtitle:
           "Choose the perfect package for your needs. Flexible and efficient support, occasional or ongoing.",
         vatNote: "Prices exclude VAT (if applicable)",
@@ -253,14 +253,13 @@ export const locales = {
         },
 
         standard: {
-          title:
-            "STANDARD SUPPORT — Efficient & Structured Assistance",
-          subtitle:
-            "Ideal for small businesses and professionals needing regular support. Includes everything in BASIC, plus:",
-          includes:
-            "Deeper hardware & software troubleshooting | Workflow optimization & task automation (macros, formulas, templates) | Advanced document formatting (Word, PowerPoint presentations) | Priority response time | Multilingual support: Italian & English (full), French, Spanish & Swedish (small tasks) | AI-powered efficiency",
-          price: "500 SEK / hour — 10 000 SEK / month",
-        },
+  title: "WEB DESIGN (front-end)",
+  subtitle: "Responsive · Modern · Minimal",
+  includes:
+    "Simple website (1–6 pages): 10 000 SEK | Website with API integration: 20 000 SEK | Hosting: chosen by the client (managed by me or self-hosted) | Maintenance - Basic Package (1 000–1 500 SEK/month): monthly security updates (e.g. React dependencies), uptime and performance monitoring, monthly backup, email support (24–48h response time), extra modifications billed separately at 600–900 SEK/hour | Maintenance - Advanced Package (2 500–4 000 SEK/month): all services from the Basic package, weekly or biweekly updates, 1–2 hours of modifications included, priority support, advanced monitoring of performance/API usage",
+  price: "10 000 – 25 000 SEK",
+},
+
 
         night: {
           title: "NIGHT SUPPORT & CUSTOM PROJECTS",

@@ -6,9 +6,10 @@ import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import App from "./App.jsx";
 import BlogPage from "@/pages/BlogPage.jsx";
 import BlogPost from "@/pages/BlogPost.jsx";
+import PrivacyPolicy from "@/pages/PrivacyPolicy.jsx"; 
 import "./index.css";
 
-import { I18nProvider } from "@/i18n";           // se non re-esporta, usa "@/i18n/I18nProvider"
+import { I18nProvider } from "@/i18n";
 import { SfxProvider } from "@/sfx/SfxProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/" element={<App />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Router>

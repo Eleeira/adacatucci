@@ -25,30 +25,30 @@ export default function ServicesPanel() {
       <div className="flex flex-wrap items-center gap-2">
         <span className="chip rounded-md px-2 py-1 text-xs">{t("services.panel.vatNote")}</span>
         <span className="chip rounded-md px-2 py-1 text-xs">
-          {t("services.panel.billingVia")} <strong className="ml-1">Frilans&nbsp;Finans</strong>
+          {t("services.panel.billingVia")} <strong className="ml-1">Frilans Finans</strong>
         </span>
       </div>
 
       {/* Grid */}
-      <div className="grid gap-4 sm:grid-cols-2">
-        <TierCard
-          emoji="💪"
-          title={t("services.panel.basic.title")}
-          subtitle={t("services.panel.basic.subtitle")}
-          items={basicIncludes}
-          price={t("services.panel.basic.price")}
-        />
+      <div className="grid gap-4">
 
+        <article className="relative">
+          {/* Ribbon */}
+          <div className="absolute top-2 right-[-30px] rotate-45 bg-cyber-neon text-black 
+                  px-6 py-1 text-xs font-bold shadow-lg shadow-neon animate-pulse z-30">
+            🔥 UPDATE! 🔥
+          </div>
         <TierCard
-          emoji="🔋"
+          emoji="💻"
           title={t("services.panel.standard.title")}
           subtitle={t("services.panel.standard.subtitle")}
           items={standardIncludes}
           price={t("services.panel.standard.price")}
           highlight
         />
+        </article>
 
-        <TierCard
+       <TierCard
           emoji="🌙"
           title={t("services.panel.night.title")}
           subtitle={t("services.panel.night.subtitle")}
@@ -58,9 +58,19 @@ export default function ServicesPanel() {
             window.open(`mailto:${LINKS.email}?subject=${encodeURIComponent("Services - Night/Custom Quote")}`)
           }
         />
+       
+        
+        <TierCard
+          emoji="💪"
+          title={t("services.panel.basic.title")}
+          subtitle={t("services.panel.basic.subtitle")}
+          items={basicIncludes}
+          price={t("services.panel.basic.price")}
+        />
+
 
         <TierCard
-          emoji="👩‍💻"
+          emoji="🎨"
           title={t("services.panel.creatives.title")}
           subtitle={t("services.panel.creatives.subtitle")}
           items={creativeIncludes}

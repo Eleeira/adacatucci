@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 /* ---------------- Icons ---------------- */
@@ -135,15 +136,22 @@ export default function Footer() {
 
 
         {/* Mini-log / credits */}
-        <div className="grid gap-2">
-          <div className="text-white/60 text-xs uppercase tracking-wider">Build</div>
-          <ul className="text-white/70 text-sm space-y-1">
-            <li>React • Vite • Tailwind</li>
-            <li>i18n, modali, menu radiale</li>
-            <li>FX: scanlines, iris, ripple</li>
-          </ul>
-        </div>
-      </div>
+<div className="grid gap-2">
+  <div className="text-white/60 text-xs uppercase tracking-wider">Build</div>
+  <ul className="text-white/70 text-sm space-y-1">
+    <li>React • Vite • Tailwind</li>
+    <li>i18n, modali, menu radiale</li>
+    <li>FX: scanlines, iris, ripple</li>
+    <li className="pt-2">
+      <nav className="flex flex-wrap items-center gap-x-3 gap-y-1">
+        <Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link>
+        {/* opzionale separatore e altri link */}
+        {/* <span aria-hidden className="opacity-40">•</span>
+        <Link to="/cookies" className="hover:underline">Cookies</Link> */}
+      </nav>
+    </li>
+  </ul>
+</div></div>
 
 
 

@@ -15,7 +15,12 @@ import AboutPanel from "@/components/AboutPanel";
 import ServicesPanel from "@/components/ServicesPanel";
 import ContactPanel from "@/components/ContactPanel";
 
+
+
 const PAGES = { ABOUT: "about", SERVICES: "services", CONTACT: "contact", BLOG: "blog" };
+
+
+
 
 export default function App() {
   const { t } = useI18n();
