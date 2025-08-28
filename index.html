@@ -5,6 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+
+<!-- Referrer-Policy -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- Permissions Policy -->
+<meta http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=(), interest-cohort=()">
+
+<!-- X-XSS-Protection -->
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
       <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Adina — Digital Services" />
