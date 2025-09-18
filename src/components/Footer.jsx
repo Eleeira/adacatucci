@@ -102,7 +102,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="text-left">
           <h3 className="[font-family:var(--font-display)] text-2xl font-semibold tracking-wide">
-            <span className="text-cyber-neon">Adina</span> <span className="text-white/80">Digital_Services</span>
+            <span className="text-cyber-neon">ADA</span> <span className="text-white/80">Digital_Services</span>
           </h3>
           <p>Your Human Digital Assistant, always one step ahead.</p>
         
@@ -166,7 +166,7 @@ export default function Footer() {
 
       {/* bottom bar */}
       <div className="footer-bottom relative z-10 border-t border-white/10 px-6 py-4 text-center text-white/60 text-xs">
-        © {year} ADINA — All rights reserved.
+        © {year} Hildur A. Catucci — All rights reserved.
       </div>
     </footer>
   );
