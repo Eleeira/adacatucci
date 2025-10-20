@@ -166,7 +166,17 @@ export default function Footer() {
 
       {/* bottom bar */}
       <div className="footer-bottom relative z-10 border-t border-white/10 px-6 py-4 text-center text-white/60 text-xs">
-        © {year} Hildur A. Catucci — All rights reserved.
+       <div>
+          © {new Date().getFullYear()} {t.brand} ·{" "}
+          <a
+          href="https://beaniestech.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-[var(--clr-primary-600)] transition-colors"
+        >
+        designed & built by BEANIES.TECH
+      </a>
+    </div>
       </div>
     </footer>
   );
