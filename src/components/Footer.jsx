@@ -166,9 +166,7 @@ export default function Footer() {
 
       {/* bottom bar */}
       <div className="footer-bottom relative z-10 border-t border-white/10 px-6 py-4 text-center text-white/60 text-xs">
-       <div>
-          © {new Date().getFullYear()} {t.brand} ·{" "}
-          <a
+        © {year} <a
           href="https://beaniestech.dev/"
           target="_blank"
           rel="noopener noreferrer"
@@ -176,7 +174,6 @@ export default function Footer() {
         >
         designed & built by BEANIES.TECH
       </a>
-    </div>
       </div>
     </footer>
   );
